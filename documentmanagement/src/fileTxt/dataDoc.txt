@@ -1,2 +1,3 @@
 Newspaper,Bao1,Bao hay,Tuoi tre,5,Nguyen,11
 Book,Sach1,LapTrinh,Tuoi Tre,5,Nguyen,Lap Trinh,2024
+Magazine,Tapchi1,Tuoi Tre,Doi Song,3,Doi Song,12
