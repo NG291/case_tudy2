@@ -15,7 +15,7 @@ public class Borrower {
     public Borrower(String customerCode, String customerName, String customerPhone, String customerGender) {
         this.customerCode = customerCode;
         this.customerName = customerName;
-        this.customerPhone = customerName;
+        this.customerPhone = customerPhone;
         this.customerGender = customerGender;
         this.borrowedDocuments = new ArrayList<>();
     }

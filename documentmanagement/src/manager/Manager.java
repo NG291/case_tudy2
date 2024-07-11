@@ -1,4 +1,4 @@
-package manage;
+package manager;
 
 import InformationCustomers.Borrower;
 import InformationDocuments.Book;
@@ -12,11 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Manage {
+public class Manager {
     private final List<Document> documentLists;
     private final List<Borrower> borrowerList;
 
-    public Manage() {
+    public Manager() {
         this.documentLists = FileDocDocument.read();
         this.borrowerList = FileDocBorrower.readFileBorrower();
     }
@@ -102,19 +102,18 @@ public class Manage {
 
     }
 
-    public void addB(Scanner scanner) {
+    public void addBorrowerName(Scanner scanner) {
         System.out.println("Ma id nguoi muon");
         String borrowerCode = scanner.nextLine();
         System.out.println("Ten nguoi muon");
         String borrowerName = scanner.nextLine();
-        System.out.println("So điện thoại liên hệ");
+        System.out.println("So dien thoại lien he");
         String borrowerPhone = scanner.nextLine();
-        System.out.println("Giơi tính ");
+        System.out.println("Gioi Tinh ");
         String borrowerGender = scanner.nextLine();
         Borrower borrower = new Borrower(borrowerCode, borrowerName, borrowerPhone, borrowerGender);
         addBorrower(borrower);
     }
-
 
     public Borrower findBorrowerById(String borrowerId) {
         for (Borrower borrower : borrowerList) {
@@ -132,7 +131,7 @@ public class Manage {
 
     public Document findDocumentById(String documentId) {
         for (Document document : documentLists) {
-            if (document.getMaterialCode().equals(documentId)) {
+            if (document.getMaterialCode().equalsIgnoreCase(documentId)) {
                 return document;
             }
         }
@@ -141,7 +140,7 @@ public class Manage {
 
     public Document findDocumentByTitle(String documentPublisher) {
         for (Document document : documentLists) {
-            if (document.getPublisherName().equals(documentPublisher)) ;
+            if (document.getPublisherName().equalsIgnoreCase(documentPublisher)) ;
             return document;
         }
         return null;

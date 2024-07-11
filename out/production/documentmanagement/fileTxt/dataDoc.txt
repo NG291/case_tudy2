@@ -1,5 +1,2 @@
-Newspaper,1,1,1,1,1,1
-Book,2,3,4,5,6,5,6
-Book,4,4,4,4,4,4,4
-Magazine,5,5,5,5,5,5
-Newspaper,6,6,6,6,6,6
+Newspaper,Bao1,Bao hay,Tuoi tre,5,Nguyen,11
+Book,Sach1,LapTrinh,Tuoi Tre,5,Nguyen,Lap Trinh,2024
