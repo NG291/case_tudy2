@@ -1,3 +1,5 @@
+package manage;
+
 import InformationCustomers.Borrower;
 import InformationDocuments.Book;
 import InformationDocuments.Document;
@@ -122,6 +124,11 @@ public class Manage {
         }
         return null;
     }
+    public void displayAllBorrower(){
+        for (Borrower borrower : borrowerList){
+            System.out.println(borrower);
+        }
+    }
 
     public Document findDocumentById(String documentId) {
         for (Document document : documentLists) {
@@ -168,6 +175,8 @@ public class Manage {
     }
 
     public void returnDocument(String borrowerId, String documentId) {
+        System.out.println("Nhap ma id nguoi muon:");
+        System.out.println("Nha");
         Borrower borrower = findBorrowerById(borrowerId);
         Document document = findDocumentById(documentId);
 
