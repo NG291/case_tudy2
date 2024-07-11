@@ -32,19 +32,19 @@ public class Manager {
 
     public void addBook(Scanner scanner) {
         try {
-            System.out.println(" Nhap ma");
+            System.out.println("Enter the book code");
             String bookCode = scanner.nextLine();
-            System.out.println("Nhap ten sach");
+            System.out.println("Enter the book title");
             String bookTitle = scanner.nextLine();
-            System.out.println("Nhap ten nha san xuat");
+            System.out.println("Enter the publisher name");
             String bookPublisher = scanner.nextLine();
-            System.out.println("Nhap so luong san pham");
+            System.out.println("Enter the product quantity");
             int bookQuantity = Integer.parseInt(scanner.nextLine());
-            System.out.println("Nhap ten tac gia");
+            System.out.println("Enter the author's name");
             String bookAuthor = scanner.nextLine();
-            System.out.println("Nhap loai sach");
+            System.out.println("Enter the book type");
             String bookType = scanner.nextLine();
-            System.out.println("Nhap nam  xuat ban");
+            System.out.println("Enter the year of publication");
             int productionYear = Integer.parseInt(scanner.nextLine());
 
             Book book = new Book(bookCode, bookTitle, bookPublisher, bookQuantity, bookAuthor, bookType, productionYear);
@@ -56,17 +56,17 @@ public class Manager {
     }
 
     public void addMagazine(Scanner scanner) {
-        System.out.println("nhap ma");
+        System.out.println("Enter the magazine code");
         String magazineId = scanner.nextLine();
-        System.out.println("Nhap ten tap chi");
+        System.out.println("Enter the magazine name");
         String magazineTitle = scanner.nextLine();
-        System.out.println("Nhap ten nha san xuat");
+        System.out.println("Enter the publisher name");
         String magazinePublisher = scanner.nextLine();
-        System.out.println("Nhap so luong san pham");
+        System.out.println("Enter the product quantity");
         int magazineQuantity = Integer.parseInt(scanner.nextLine());
-        System.out.println("Nhap loai san pham");
+        System.out.println("Enter the magazine type");
         String magazineType = scanner.nextLine();
-        System.out.println("Nhap thang san xuat");
+        System.out.println("Enter the month of publication");
         int magazineMonth = Integer.parseInt(scanner.nextLine());
 
         Magazine magazine = new Magazine(magazineId, magazineTitle, magazinePublisher, magazineQuantity, magazineType, magazineMonth);
@@ -75,17 +75,17 @@ public class Manager {
 
     public void addNewspaper(Scanner scanner) {
         try {
-            System.out.println("Nhap ma bao");
+            System.out.println("Enter the token");
             String newspaperId = scanner.nextLine();
-            System.out.println("nhap ten bai bao");
+            System.out.println("Enter the newspaper title");
             String newspaperTitle = scanner.nextLine();
-            System.out.println("Nhap nha xuat ban");
+            System.out.println("Enter the publisher name");
             String newspaperPublisher = scanner.nextLine();
-            System.out.println("Nhap so luong bai bao");
+            System.out.println("Enter the newspaper quantity");
             int newspaperQuantity = Integer.parseInt(scanner.nextLine());
-            System.out.println("Nhap ten tac gia");
+            System.out.println("Enter the author's name");
             String newspaperAuthorName = scanner.nextLine();
-            System.out.println("Nhap so ngay viet");
+            System.out.println("Enter the number now");
             int newspaperDate = Integer.parseInt(scanner.nextLine());
 
             Newspaper newspaper = new Newspaper(newspaperId, newspaperTitle, newspaperPublisher, newspaperQuantity, newspaperAuthorName, newspaperDate);
@@ -103,13 +103,13 @@ public class Manager {
     }
 
     public void addBorrowerName(Scanner scanner) {
-        System.out.println("Ma id nguoi muon");
+        System.out.println("Enter the borrower code");
         String borrowerCode = scanner.nextLine();
-        System.out.println("Ten nguoi muon");
+        System.out.println("Enter the borrower's name");
         String borrowerName = scanner.nextLine();
-        System.out.println("So dien thoại lien he");
+        System.out.println("Enter your phone number");
         String borrowerPhone = scanner.nextLine();
-        System.out.println("Gioi Tinh ");
+        System.out.println("Enter Gender");
         String borrowerGender = scanner.nextLine();
         Borrower borrower = new Borrower(borrowerCode, borrowerName, borrowerPhone, borrowerGender);
         addBorrower(borrower);
@@ -174,8 +174,6 @@ public class Manager {
     }
 
     public void returnDocument(String borrowerId, String documentId) {
-        System.out.println("Nhap ma id nguoi muon:");
-        System.out.println("Nha");
         Borrower borrower = findBorrowerById(borrowerId);
         Document document = findDocumentById(documentId);
 

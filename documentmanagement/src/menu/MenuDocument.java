@@ -10,14 +10,14 @@ public class MenuDocument {
     public static void menuSelect2(Scanner scanner, Manager manager) {
         try {
             while (true) {
-                System.out.println("    Quan ly tai lieu   ");
-                System.out.println("1:Them tai lieu");
-                System.out.println("2:Xoa tai lieu");
-                System.out.println("3:Tim kiem tai lieu");
-                System.out.println("4:Hien thi  tai lieu");
-                System.out.println("5:Them thong tin khach hang");
-                System.out.println("6:Hien thi danh sach thong tin khach muon");
-                System.out.println("0:Thoat chuong trinh");
+                System.out.println("  Document Management ");
+                System.out.println("1:Add documents");
+                System.out.println("2:Delete documents");
+                System.out.println("3:Search documents");
+                System.out.println("4:Show documents");
+                System.out.println("5:Add customer information");
+                System.out.println("6:Currently, customers are borrowing");
+                System.out.println("0:Exit the program");
 
                 int chocie = Integer.parseInt(scanner.nextLine());
                 if (chocie == 0) {
@@ -29,7 +29,7 @@ public class MenuDocument {
                         break;
 
                     case 2:
-                        System.out.println("Nhap id xoa");
+                        System.out.println("Enter the deletion id code");
                         String id = scanner.nextLine();
                         manager.removeDocument(id);
                         break;
@@ -56,9 +56,9 @@ public class MenuDocument {
     }
     public static void addTypeDocument(Scanner scanner, Manager manager) {
         try {
-            System.out.println("1. Them bao");
-            System.out.println("2. Them sach");
-            System.out.println("3. Them tap chi");
+            System.out.println("1: Add newspaper");
+            System.out.println("2: Add books");
+            System.out.println("3: Add a magazine");
             int option = Integer.parseInt(scanner.nextLine());
 
             switch (option) {
@@ -72,7 +72,7 @@ public class MenuDocument {
                     manager.addMagazine(scanner);
                     break;
                 default:
-                    System.out.println("Ket Thuc");
+                    System.out.println("End");
                     break;
             }
         } catch (Exception e) {
@@ -81,26 +81,26 @@ public class MenuDocument {
     }
 
     public static void findType(Scanner scanner, Manager manager) {
-        System.out.println("1:Tim kiem theo id");
-        System.out.println("2:Tim kiem theo ten");
-        System.out.println("3:Tim kiem tac gia");
+        System.out.println("1:Search by ID");
+        System.out.println("2:Search by name");
+        System.out.println("3:Search by author");
         int option = Integer.parseInt(scanner.nextLine());
         try {
             switch (option) {
                 case 1:
-                    System.out.println("Nhap id");
+                    System.out.println("Enter the id code");
                     String id = scanner.nextLine();
                     Document doc = manager.findDocumentById(id);
                     System.out.println(doc);
                     break;
                 case 2:
-                    System.out.println("Nhap Ten ");
+                    System.out.println("Enter name");
                     String name = scanner.nextLine();
                     Document document = manager.findDocumentByTitle(name);
                     System.out.println(document);
                     break;
                 case 3:
-                    System.out.println("Nhap ten tac gia");
+                    System.out.println("Enter the author's name");
                     String authorNames = scanner.nextLine();
                     List<Document> list = manager.findDocumentByAuthor(authorNames);
                     for (Document b : list) {

@@ -10,10 +10,10 @@ public class App {
         Manager manager = new Manager();
         try {
             while (true) {
-            System.out.println("   Quan ly He thong    ");
-            System.out.println("1:Quan ly tai lieu");
-            System.out.println("2:Quan ly Khach muon");
-            System.out.println("0:Thoat chương trinh");
+            System.out.println(" Document system management  ");
+            System.out.println("1:Document Management");
+            System.out.println("2:Manage borrowers");
+            System.out.println("0:Exit the program");
                 int chocie = Integer.parseInt(scanner.nextLine());
                 if (chocie == 0) {
                     break;
@@ -26,8 +26,8 @@ public class App {
                         MenuCustomers.menuSelect1(scanner, manager);
                         break;
                     default:
-                        System.out.println("Nhap lai!");
-
+                        System.out.println("Retype!");
+                        break;
                 }
             }
         }catch (Exception e){

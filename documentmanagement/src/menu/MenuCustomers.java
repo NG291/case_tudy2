@@ -9,11 +9,11 @@ public class MenuCustomers {
 
         try {
             while (true) {
-            System.out.println(" Quan ly Khach Hang ");
-            System.out.println("1:Hien thi tai lieu");
-            System.out.println("2:Muon Sach");
-            System.out.println("3:Tra Sach");
-            System.out.println("0:Thoat chương trinh");
+            System.out.println(" Customer menu ");
+            System.out.println("1:Show documents");
+            System.out.println("2:Borrow documents");
+            System.out.println("3:Return documents");
+            System.out.println("0:Exit the program");
                 int chocie = Integer.parseInt(scanner.nextLine());
                 if (chocie == 0) {
                     break;
@@ -24,16 +24,16 @@ public class MenuCustomers {
                         break;
 
                     case 2:
-                        System.out.println("Nhap id nguoi muon");
+                        System.out.println("Enter the borrower code");
                         String idBorrower = scanner.nextLine();
-                        System.out.println("Nhap id tai lieu");
+                        System.out.println("Enter the document code");
                         String idDocument = scanner.nextLine();
                         manager.borrowDocument(idBorrower , idDocument);
                         break;
                     case 3:
-                        System.out.println("Nhap id nguoi trả");
+                        System.out.println("Enter returner id code");
                         String idReturner = scanner.nextLine();
-                        System.out.println("Nhap id tai lieu");
+                        System.out.println("Enter the returned document id code");
                         String idDocument1 = scanner.nextLine();
                         manager.returnDocument(idReturner,idDocument1);
                         break;
